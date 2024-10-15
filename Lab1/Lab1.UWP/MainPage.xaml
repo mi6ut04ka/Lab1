@@ -1,0 +1,61 @@
+﻿<forms:WindowsPage
+    x:Class="Lab1.UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:forms="using:Xamarin.Forms.Platform.UWP"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Lab1.UWP"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20">
+            <TextBlock Text="Matrix Y(8x8)" 
+                       FontSize="24"
+                       Margin="0,0,0,10"
+                       HorizontalAlignment="Center" />
+
+            <Grid x:Name="MatrixGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Button Content="Заполнить случайными числами"
+                    HorizontalAlignment="Center"
+                    Margin="0,10,0,0"
+                    Click="OnFillRandomClicked" />
+
+            <Button Content="Вычислить суммы по столбцам"
+                    HorizontalAlignment="Center"
+                    Margin="0,10,0,0"
+                    Click="OnCalculateSumsClicked" />
+
+            <TextBlock Text="Суммы по столбцам:"
+                       FontSize="20"
+                       Margin="0,20,0,10"
+                       HorizontalAlignment="Center" />
+
+            <ListBox x:Name="ResultListBox"
+                     HorizontalAlignment="Center"
+                     Margin="0,10,0,0">
+            </ListBox>
+        </StackPanel>
+    </Grid>
+
+</forms:WindowsPage>
